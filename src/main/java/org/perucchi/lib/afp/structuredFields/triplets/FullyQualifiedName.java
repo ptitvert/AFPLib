@@ -3,24 +3,25 @@ package org.perucchi.lib.afp.structuredFields.triplets;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 
-import org.perucchi.lib.Utils;
+import org.perucchi.lib.afp.utils.Utils;
 
 /**
  * @author Alessandro Perucchi
- *
  */
 public class FullyQualifiedName {
-	public static final byte[] TID = Utils.hexStringToByteArray("02");
-	private byte[] type = null;
-	private byte[] format = null;
-	private byte[] name = null;
-	private String convertedName = null;
+	public static final byte[]	TID				= Utils.hexStringToByteArray("02");
+	private byte[]				type			= null;
+	private byte[]				format			= null;
+	private byte[]				name			= null;
+	private String				convertedName	= null;
 
-	private final static int MIN_LENGTH = 4;
-	private int length = MIN_LENGTH;
+	private final static int	MIN_LENGTH		= 4;
+	private int					length			= MIN_LENGTH;
 
 	public static enum FORMAT {
-		STRING("00"), OID("10"), URL("20");
+		STRING("00"), //
+		OID("10"), //
+		URL("20");
 
 		private final byte[] internalValue;
 
@@ -47,18 +48,32 @@ public class FullyQualifiedName {
 
 	public static enum TYPE {
 
-		REPLACE_FIRST_GID_NAME("01"), FONT_FAMILY_NAME("07"), FONT_TYPEFACE_NAME("08"), MODCA_RES_HIERARCHY_REF(
-				"09"), BEGIN_RES_GROUP_REF("0A"), ATTRIBUTE_GID("0B"), PROCESS_ELEMENT_GID("0C"), BEGIN_PAGE_GROUP_REF(
-						"0D"), MEDIA_TYPE_REF("11"), MEDIA_DEST_REF("12"), CMR_REF("41"), DATAOBJ_FONT_BASE_FONT_ID(
-								"6E"), DATAOBJ_FONT_LINKED_FONT_ID("7E"), BEGIN_DOCUMENT_REF("83"), RES_OBJ_REF(
-										"84"), CODE_PAGE_NAME_REF("85"), FONT_CHARSET_NAME_REF("86"), BEGIN_PAGE_REF(
-												"87"), BEGIN_MEDIUM_MAP_REF("8D"), CODED_FONT_NAME_REF(
-														"8E"), BEGIN_DOCUMENT_INDEX_REF("98"), BEGIN_OVERLAY_REF(
-																"B0"), DATAOBJ_INTERNAL_RES_REF(
-																		"BE"), INDEX_ELEMENT_GID(
-																				"CA"), OTHER_OBJECT_DATA_REF(
-																						"CE"), DATAOBJ_EXTERNAL_RES_REF(
-																								"DE");
+		REPLACE_FIRST_GID_NAME("01"), //
+		FONT_FAMILY_NAME("07"),  //
+		FONT_TYPEFACE_NAME("08"),  //
+		MODCA_RES_HIERARCHY_REF("09"), // 
+		BEGIN_RES_GROUP_REF("0A"),  //
+		ATTRIBUTE_GID("0B"),  //
+		PROCESS_ELEMENT_GID("0C"), // 
+		BEGIN_PAGE_GROUP_REF("0D"),  //
+		MEDIA_TYPE_REF("11"),  //
+		MEDIA_DEST_REF("12"),  //
+		CMR_REF("41"),  //
+		DATAOBJ_FONT_BASE_FONT_ID("6E"), // 
+		DATAOBJ_FONT_LINKED_FONT_ID("7E"),  //
+		BEGIN_DOCUMENT_REF("83"),  //
+		RES_OBJ_REF("84"),  //
+		CODE_PAGE_NAME_REF("85"), // 
+		FONT_CHARSET_NAME_REF("86"), //
+		BEGIN_PAGE_REF("87"), //
+		BEGIN_MEDIUM_MAP_REF("8D"), //
+		CODED_FONT_NAME_REF("8E"), //
+		BEGIN_DOCUMENT_INDEX_REF("98"), //
+		BEGIN_OVERLAY_REF("B0"), //
+		DATAOBJ_INTERNAL_RES_REF("BE"), //
+		INDEX_ELEMENT_GID("CA"), //
+		OTHER_OBJECT_DATA_REF("CE"), //
+		DATAOBJ_EXTERNAL_RES_REF("DE");
 		;
 
 		private final byte[] internalValue;

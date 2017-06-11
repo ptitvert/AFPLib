@@ -3,7 +3,7 @@ package org.perucchi.lib.afp.structuredFields.triplets;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 
-import org.perucchi.lib.Utils;
+import org.perucchi.lib.afp.utils.Utils;
 
 /**
  * @author Alessandro Perucchi

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.perucchi.lib;
+package org.perucchi.lib.afp.utils;
 
 import javax.xml.bind.DatatypeConverter;
 

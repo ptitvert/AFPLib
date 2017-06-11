@@ -3,7 +3,7 @@
  */
 package org.perucchi.lib.afp;
 
-import org.perucchi.lib.Utils;
+import org.perucchi.lib.afp.utils.Utils;
 
 /**
  * @author Alessandro Perucchi
